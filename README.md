@@ -7,7 +7,9 @@ AirDrawJS
 
 ## About 
 
-Really Do you care ?
+Really Guys ? Do you care ?
+
+If you care give a Star !!
 
 ##Here is what you need 👇
 
