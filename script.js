@@ -3,6 +3,22 @@ const canvasElement = document.getElementsByClassName('output_canvas')[0];
 const canvasCtx = canvasElement.getContext('2d');
 var clientHeight = document.getElementById('huh').clientHeight;
 var clientWidth = document.getElementById('huh').clientWidth;
+const canvas = document.querySelector('#board');
+const ctx = canvas.getContext('2d');
+const strokeVal = document.querySelector('input[name="brushStroke"]');
+const brushColor = document.querySelector('input[name="brushColor"]');
+const clearBtn = document.querySelector('#clear');
+const roundLine = document.querySelector('#round');
+const squareLine = document.querySelector('#square');
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+ctx.lineJoin = 'round';
+ctx.lineCap = 'round'
+let isDrawing = false;
+let lastX = 0;
+let lastY = 0;
+ctx.lineWidth = 12;
 canvasCtx.canvas.width = clientWidth;
 canvasCtx.canvas.height = clientHeight;
 let lastx = ""
@@ -11,7 +27,6 @@ let x = ""
 let y = ""
 let writingCounter = 0;
 let state;
-
 
 async function onResults(results) {
 
@@ -82,60 +97,7 @@ const camera = new Camera(videoElement, {
     height: clientHeight
 });
 
-
-const URL = "./my_model/";
-
-let model, webcam, labelContainer, maxPredictions;
-
-// Load the image model and setup the webcam
-async function init() {
-    const modelURL = URL + "model.json";
-    const metadataURL = URL + "metadata.json";
-    model = await tmImage.load(modelURL, metadataURL);
-    maxPredictions = model.getTotalClasses();
-
-}
-
-async function predict() {
-    // predict can take in an image, video or canvas html element
-    const prediction = await model.predict(videoElement);
-    for (let i = 0; i < maxPredictions; i++) {
-        const classPrediction =
-            prediction[i].className + ": " + prediction[i].probability.toFixed(2);
-        if (prediction[0].probability > 0.80) {
-            return "background"
-        }
-        if (prediction[1].probability > 0.80) {
-            return "writing"
-        }
-        if (prediction[2].probability > 0.80) {
-            return "duster"
-        }
-    }
-}
-
-init();
 camera.start();
-
-// drawing Script
-
-
-const canvas = document.querySelector('#board');
-const ctx = canvas.getContext('2d');
-const strokeVal = document.querySelector('input[name="brushStroke"]');
-const brushColor = document.querySelector('input[name="brushColor"]');
-const clearBtn = document.querySelector('#clear');
-const roundLine = document.querySelector('#round');
-const squareLine = document.querySelector('#square');
-
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-ctx.lineJoin = 'round';
-ctx.lineCap = 'round'
-let isDrawing = false;
-let lastX = 0;
-let lastY = 0;
-ctx.lineWidth = 12;
 
 function getStrokeVal() {
     ctx.lineWidth = this.value;
@@ -169,9 +131,6 @@ brushColor.addEventListener('change', getColor);
 clear.addEventListener('click', () => {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 });
-// roundLine.addEventListener('click', () => ctx.lineCap = 'round');
-// squareLine.addEventListener('click', () => ctx.lineCap = 'square');
-
 
 canvas.addEventListener('mousedown', (e) => {
     isDrawing = true;
