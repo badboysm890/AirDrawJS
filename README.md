@@ -21,7 +21,7 @@ Really Do you care ?
 
 ## Working
 
-It work and will support this project for awhile for sure ...
+It works and will support this project for awhile for sure ...
 
 ![name-of-you-image](https://github.com/badboysm890/AirDrawJS/blob/main/Screenshot%202021-06-19%20at%2021-51-00%20Screenshot.png)
 
