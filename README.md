@@ -23,7 +23,7 @@ Really Do you care ?
 
 It work and will support this project for awhile for sure ...
 
-![name-of-you-image](https://cdn.discordapp.com/attachments/807498823009304647/855526212705583104/Web_capture_19-6-2021_04538_127.0.0.1.jpeg)
+![name-of-you-image](https://github.com/badboysm890/AirDrawJS/blob/main/Screenshot%202021-06-19%20at%2021-51-00%20Screenshot.png)
 
 ## Whats the use of this Project ?
 
