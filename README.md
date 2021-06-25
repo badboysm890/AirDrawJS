@@ -1,6 +1,5 @@
-# AirDrawJS
+![AirDraw.js](https://github.com/badboysm890/AirDrawJS/blob/main/rsz_airdraw_js.png)
 
-AirDrawJS
  
 > keywords: Computer Vision, Deeplearning, Hand tracking
 
