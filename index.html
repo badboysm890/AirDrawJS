@@ -7,48 +7,30 @@
     <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/selfie_segmentation/selfie_segmentation.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="airdraw.css">
 </head>
 
 <body>
-    <style>
-        .output_canvas {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-        }
-    </style>
     <div class="container">
         <video class="input_video" id="videoElement" hidden></video>
-        <canvas class="output_canvas" id="huh"></canvas>
+        <!-- <canvas class="output_canvas"></canvas> -->
+        <canvas class="airdrawCanvas" id="huh"></canvas>
+        <!-- <canvas class="bgremoveCanvas"></canvas> -->
     </div>
     <div class="controls">
         <input type="range" min="1" max="20" value="1" name="brushStroke">
         <input type="color" name="brushColor">
         <button id="clear" class="btn btn-danger">clear</button>
-
     </div>
-
     <canvas id="board"></canvas>
+    <!-- <video class="input_video" hidden></video> -->
+
 </body>
-<script src="script.js"></script>
-<!-- <script src="scriptDrawing.js"></script> -->
-<style>
-    canvas {
-        transform: rotateY(180deg);
-        -webkit-transform: rotateY(180deg);
-        /* Safari and Chrome */
-        -moz-transform: rotateY(180deg);
-        /* Firefox */
-    }
-</style>
+<script src="airdraw.js"></script>
 
 </html>
