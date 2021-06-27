@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <title>AirdrawJS</title>
     <meta charset="utf-8">
     <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js" crossorigin="anonymous"></script>
@@ -16,18 +17,22 @@
 </head>
 
 <body>
-    <div class="container">
-        <video class="input_video" id="videoElement" hidden></video>
-        <!-- <canvas class="output_canvas"></canvas> -->
-        <canvas class="airdrawCanvas" id="huh"></canvas>
-        <!-- <canvas class="bgremoveCanvas"></canvas> -->
+    <div class="all">
+        <div class="container">
+            <video class="input_video" id="videoElement" hidden></video>
+            <!-- <canvas class="output_canvas"></canvas> -->
+            <canvas class="airdrawCanvas" id="huh"></canvas>
+            <!-- <canvas class="bgremoveCanvas"></canvas> -->
+        </div>
+        <div class="controls ml-3">
+            <input type="range" min="1" max="20" value="1" name="brushStroke">
+            <input type="color" name="brushColor">
+            <button id="clear" class="btn btn-danger">clear</button>
+            <p> ⌚ It Might Take a Second to load Please Wait</p>
+        </div>
+        <canvas id="board"></canvas>
     </div>
-    <div class="controls">
-        <input type="range" min="1" max="20" value="1" name="brushStroke">
-        <input type="color" name="brushColor">
-        <button id="clear" class="btn btn-danger">clear</button>
-    </div>
-    <canvas id="board"></canvas>
+
     <!-- <video class="input_video" hidden></video> -->
 
 </body>
