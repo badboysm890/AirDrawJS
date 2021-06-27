@@ -3,6 +3,14 @@
  
 > keywords: Computer Vision, Deeplearning, Hand tracking
 
+##Change Log
+
++ verison 1.0
+Just Handtracking and Drawing Enabled
+
++ Version 1.1
+Background Removal Enabled
+
 
 ## About 
 
