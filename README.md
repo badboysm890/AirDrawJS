@@ -3,20 +3,6 @@
  
 > keywords: Computer Vision, Deeplearning, Hand tracking
 
-## Warning ⚠️
-
-
-⚠️Use Chrome or Chromium till i fix or use this https://github.com/badboysm890/AirDrawJS/tree/6ac0358dc4c69f4695cfd8c95be39c87c276bc9f Commit to clone⚠️
-
-##Change Log
-
-+ verison 1.0
-Just Handtracking and Drawing Enabled
-If needed (https://github.com/badboysm890/AirDrawJS/tree/6ac0358dc4c69f4695cfd8c95be39c87c276bc9f)
-
-+ Version 1.1
-Background Removal Enabled
-
 
 ## About 
 
